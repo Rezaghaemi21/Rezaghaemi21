@@ -1,0 +1,60 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flow" x1="100" y1="150" x2="1100" y2="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#52525B"/>
+      <stop offset="0.5" stop-color="#A1A1AA"/>
+      <stop offset="1" stop-color="#F4F4F5"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-100%" width="160%" height="300%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <style>
+      .signal { stroke-dasharray: 80 780; animation: signal 4.5s linear infinite; }
+      .node { transform-box: fill-box; transform-origin: center; animation: pulse 2.8s ease-in-out infinite; }
+      .node-2 { animation-delay: .7s; }
+      .node-3 { animation-delay: 1.4s; }
+      @keyframes signal { to { stroke-dashoffset: -860; } }
+      @keyframes pulse { 0%, 100% { opacity: .45; transform: scale(.85); } 50% { opacity: 1; transform: scale(1.35); } }
+      @media (prefers-reduced-motion: reduce) { .signal, .node { animation: none; } }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="298" rx="28" fill="#0A0A0B" stroke="#252527" stroke-width="2"/>
+  <path d="M168 151H1031" stroke="url(#flow)" stroke-opacity="0.22" stroke-width="24" stroke-linecap="round" filter="url(#soft)"/>
+  <path d="M168 151H1031" stroke="url(#flow)" stroke-width="2" stroke-linecap="round"/>
+  <path class="signal" d="M168 151H1031" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+
+  <g font-family="Inter, SF Pro Display, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <g transform="translate(70 87)">
+      <rect width="220" height="128" rx="20" fill="#111113" stroke="#303035"/>
+      <text x="24" y="38" fill="#71717A" font-size="12" font-weight="600" letter-spacing="1.6">01 · DIRECTION</text>
+      <text x="24" y="75" fill="#F4F4F5" font-size="22" font-weight="600">Strategy</text>
+      <text x="24" y="100" fill="#A1A1AA" font-size="14">Problem · Value · Risk</text>
+    </g>
+
+    <g transform="translate(350 87)">
+      <rect width="220" height="128" rx="20" fill="#111113" stroke="#303035"/>
+      <text x="24" y="38" fill="#71717A" font-size="12" font-weight="600" letter-spacing="1.6">02 · SIGNAL</text>
+      <text x="24" y="75" fill="#F4F4F5" font-size="22" font-weight="600">Data</text>
+      <text x="24" y="100" fill="#A1A1AA" font-size="14">Context · Quality · Access</text>
+    </g>
+
+    <g transform="translate(630 87)">
+      <rect width="220" height="128" rx="20" fill="#111113" stroke="#303035"/>
+      <text x="24" y="38" fill="#71717A" font-size="12" font-weight="600" letter-spacing="1.6">03 · SYSTEM</text>
+      <text x="24" y="75" fill="#F4F4F5" font-size="22" font-weight="600">Intelligence</text>
+      <text x="24" y="100" fill="#A1A1AA" font-size="14">Agents · Retrieval · Tools</text>
+    </g>
+
+    <g transform="translate(910 87)">
+      <rect width="220" height="128" rx="20" fill="#111113" stroke="#303035"/>
+      <text x="24" y="38" fill="#71717A" font-size="12" font-weight="600" letter-spacing="1.6">04 · OUTCOME</text>
+      <text x="24" y="75" fill="#F4F4F5" font-size="22" font-weight="600">Impact</text>
+      <text x="24" y="100" fill="#A1A1AA" font-size="14">Adoption · Scale · ROI</text>
+    </g>
+  </g>
+
+  <circle class="node" cx="320" cy="151" r="4" fill="#71717A"/>
+  <circle class="node node-2" cx="600" cy="151" r="4" fill="#A1A1AA"/>
+  <circle class="node node-3" cx="880" cy="151" r="4" fill="#D4D4D8"/>
+</svg>
